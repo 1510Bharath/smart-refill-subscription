@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Smart Refill - Menu Version</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ===== MENU ===== -->
+<nav>
+<h2>Smart Refill Subscription</h2>
+<ul>
+<li onclick="goTo('home')">Home</li>
+<li onclick="goTo('products')">Products</li>
+<li onclick="goTo('dashboard')">Dashboard</li>
+<li onclick="goTo('reminder')">Reminder</li>
+<li onclick="goTo('analytics')">Analytics</li>
+</ul>
+</nav>
+
+<div class="screen active" id="home">
+
+    <!-- HERO SECTION -->
+    <div class="hero">
+    <h1>A SMART REFILL SUBSCRIPTION</h1>
+    <p class="subtitle">
+    Premium subscription refills for your health essentials.
+    Effortless. Predictive. Reliable.
+    </p>
+    <button class="primary" onclick="goTo('products')">Get Started</button>
+    </div>
+    
+    <!-- FEATURES SECTION -->
+    <div class="features">
+    
+    <div class="feature-card">
+    <h3>🔄 Predictive Refills</h3>
+    <p>
+    Never run out again. Our system tracks your usage and auto-delivers
+    before your stock runs low.
+    </p>
+    </div>
+    
+    <div class="feature-card">
+    <h3>🛡 Verified Quality</h3>
+    <p>
+    Every product batch is quality checked and lab verified.
+    Transparency in every delivery.
+    </p>
+    </div>
+    
+    <div class="feature-card">
+    <h3>✨ Auto-Managed Subscriptions</h3>
+    <p>
+    Pause, skip, modify anytime. Total flexibility with zero stress.
+    </p>
+    </div>
+    
+    <div class="feature-card">
+    <h3>📊 Digital Dashboard</h3>
+    <p>
+    Track deliveries, manage billing, and monitor usage
+    from one smart dashboard.
+    </p>
+    </div>
+    
+    </div>
+    
+    <!-- PRODUCT HIGHLIGHT SECTION -->
+    <h2 style="margin-top:60px;">Our Wellness Essentials</h2>
+    
+    <div class="products">
+    
+    <div class="card">
+    <img src="./images/herbal_soups.jpg" class="product-img">
+    <h4 class="smart">Herbal Soups</h4>
+    <p class="smart">Immunity-boosting traditional herbal blends.</p>
+    </div>
+    
+    <div class="card">
+    <img src="./images/pasta2.jpg" class="product-img">
+    <h4 class="smart">Millet Pasta</h4>
+    <p class="smart">High-fiber, nutritious millet-based pasta alternative.</p>
+    </div>
+    
+    <div class="card">
+    <img src="./images/herbal_tea.jpg" class="product-img">
+    <h4 class="smart">Herbal Tea</h4>
+    <p class="smart">Detoxifying and calming herbal infusions.</p>
+    </div>
+    
+    <div class="card">
+    <img src="./images/health_mixes.jpg" class="product-img">
+    <h4 class="smart">Health Mixes</h4>
+    <p class="smart">Energy-packed daily nutrition mixes.</p>
+    </div>
+    
+    </div>
+    
+    </div>
+
+<!-- ===== PRODUCTS ===== -->
+<div class="screen" id="products">
+    <h3>Our Wellness Products</h3>
+    <div class="products">
+    
+    <div class="card">
+    <img src="./images/herbal_soups.jpg" alt="herbal_Soups">
+    <div class="card-content">
+    <h4>Herbal Soups</h4>
+    <p>Immunity boosting herbal soup.</p>
+    <p class="price">₹299</p>
+    <button class="green" onclick="subscribe('Herbal Soups',299)">Subscribe</button>
+    </div>
+    </div>
+    
+    <div class="card">
+    <img src="./images/pasta2.jpg" alt="Millet_Pasta">
+    <div class="card-content">
+    <h4>Millet Pasta</h4>
+    <p>High fiber healthy millet pasta.</p>
+    <p class="price">₹249</p>
+    <button class="green" onclick="subscribe('Millet Pasta',249)">Subscribe</button>
+    </div>
+    </div>
+    
+    <div class="card">
+    <img src="./images/herbal_tea.jpg" alt="herbal_tea">
+    <div class="card-content">
+    <h4>Herbal Tea</h4>
+    <p>Detox tea for relaxation.</p>
+    <p class="price">₹199</p>
+    <button class="green" onclick="subscribe('Herbal Tea',199)">Subscribe</button>
+    </div>
+    </div>
+    
+    <div class="card">
+    <img src="./images/health_mixes.jpg" alt="health_mixes">
+    <div class="card-content">
+    <h4>Health Mix</h4>
+    <p>Multi-grain energy health mix.</p>
+    <p class="price">₹349</p>
+    <button class="green" onclick="subscribe('Health Mix',349)">Subscribe</button>
+    </div>
+    </div>
+    
+    </div>
+    </div>
+
+<!-- ===== SCREEN 3 ===== -->
+<div class="screen" id="dashboard">
+    <h3>My Subscriptions</h3>
+    
+    <div class="dashboard-grid" id="subscriptionList"></div>
+    
+    <!-- Next Button -->
+    <div style="margin-top:30px; text-align:right;">
+    <button class="green" onclick="goTo('reminder')">Next → Reminder</button>
+    </div>
+    
+    </div>
+    
+    <!-- ===== SCREEN 4 ===== -->
+    <div class="screen" id="reminder">
+    <h3>Smart Reminder 🔔</h3>
+    
+    <div id="reminderList"></div>
+    
+    <div style="margin-top:30px; display:flex; justify-content:space-between;">
+    
+    <!-- Back Button -->
+    <button class="green" onclick="goTo('dashboard')">← Back</button>
+    
+    <!-- Next Button -->
+    <button class="green" onclick="goTo('analytics')">Next → Analytics</button>
+    
+    </div>
+    
+    </div>
+    
+    <!-- ===== SCREEN 5 ===== -->
+    <div class="screen" id="analytics">
+    <h3>Subscription Analytics</h3>
+    <p>Total Active Subscriptions: <span id="activeCount">0</span></p>
+    
+    <div style="margin-top:30px;">
+    <button class="green" onclick="goTo('reminder')">← Back</button>
+    </div>
+    
+    </div>
+
+<!-- ===== MODAL ===== -->
+<div class="modal" id="modal">
+<div class="modal-content">
+<h3 id="modalTitle"></h3>
+<div class="freq-option active" onclick="selectFreq(this,15)">Every 15 Days</div>
+<div class="freq-option" onclick="selectFreq(this,30)">Every 30 Days</div>
+<div class="freq-option" onclick="selectFreq(this,45)">Every 45 Days</div>
+<button class="white" onclick="confirmModify()">Confirm</button>
+<button class="hi" onclick="closeModal()">Cancel</button>
+</div>
+</div>
+
+<!-- ===== TOAST ===== -->
+<div class="toast" id="toast"></div>
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+    <div class="footer-container">
+    
+    <div class="footer-col">
+    <h3>Smart Refill</h3>
+    <p>
+    Empowering healthy living with smart subscription refills.
+    Predictive. Reliable. Effortless wellness.
+    </p>
+    </div>
+    
+    <div class="footer-col">
+    <h4>Quick Links</h4>
+    <ul>
+    <li onclick="goTo('home')">Home</li>
+    <li onclick="goTo('products')">Products</li>
+    <li onclick="goTo('dashboard')">Dashboard</li>
+    <li onclick="goTo('reminder')">Reminder</li>
+    <li onclick="goTo('analytics')">Analytics</li>
+    </ul>
+    </div>
+    
+    <div class="footer-col">
+    <h4>Contact</h4>
+    <p>Email: support@smartrefill.com</p>
+    <p>Phone: +91 98765 43210</p>
+    <p>Location: India</p>
+    </div>
+    
+    </div>
+    
+    <div class="footer-bottom">
+    © 2026 Smart Refill. All rights reserved.
+    </div>
+    </footer>
+    <script src="Smart.js"></script>
+</body>
+</html>
